@@ -22,79 +22,47 @@ A Language Server Protocol (LSP) plugin for Claude Code, optimized for Unity gam
 
 ## Installation
 
-### Step 1: Clone this repository
+### Method A: Install from GitHub (Recommended)
+
+The easiest way to install - just two commands:
+
+```bash
+# Add the plugin marketplace
+claude plugin marketplace add bruno1308/unity-csharp-lsp-claude-code
+
+# Install the plugin (loads automatically in all projects)
+claude plugin install unity-csharp-lsp --scope user
+```
+
+Restart Claude Code and the plugin will load automatically. No `--plugin-dir` flag needed!
+
+### Method B: Manual Installation
+
+If you prefer to install manually or need to modify the plugin:
+
+#### Step 1: Clone the repository
 
 ```bash
 git clone https://github.com/bruno1308/unity-csharp-lsp-claude-code.git
 cd unity-csharp-lsp-claude-code
 ```
 
-### Step 2: Install the plugin
-
-Choose ONE of the following methods:
-
-#### Method A: User-level installation (Recommended)
-
-This installs the plugin globally for all your projects.
+#### Step 2: Copy to plugins directory
 
 **Windows (PowerShell):**
 ```powershell
-# Create plugins directory if it doesn't exist
-$pluginDir = Join-Path $env:USERPROFILE ".claude\plugins"
-New-Item -ItemType Directory -Force -Path $pluginDir
-
-# Copy the plugin (excludes .claude directory and temp files)
 $dest = Join-Path $env:USERPROFILE ".claude\plugins\unity-csharp-lsp"
-Get-ChildItem -Path "." -Exclude ".claude","tmpclaude-*" | Copy-Item -Destination $dest -Recurse -Force
+New-Item -ItemType Directory -Force -Path $dest
+Copy-Item -Path ".\*" -Destination $dest -Recurse -Force
 ```
 
 **macOS / Linux:**
 ```bash
-# Create plugins directory if it doesn't exist
-mkdir -p ~/.claude/plugins
-
-# Copy the plugin (excludes .claude directory and temp files)
-rsync -av --exclude='.claude' --exclude='tmpclaude-*' ./ ~/.claude/plugins/unity-csharp-lsp/
+mkdir -p ~/.claude/plugins/unity-csharp-lsp
+cp -r ./* ~/.claude/plugins/unity-csharp-lsp/
 ```
 
-#### Method B: Project-level installation
-
-This installs the plugin only for a specific Unity project. Good for team sharing.
-
-**Windows (PowerShell):**
-```powershell
-# Navigate to your Unity project root
-cd "C:\Path\To\Your\UnityProject"
-
-# Create plugins directory
-New-Item -ItemType Directory -Force -Path ".\.claude\plugins"
-
-# Copy the plugin (adjust source path to where you cloned the repo)
-$source = "C:\Path\To\unity-csharp-lsp-claude-code"
-$dest = ".\.claude\plugins\unity-csharp-lsp"
-Get-ChildItem -Path $source -Exclude ".claude","tmpclaude-*" | Copy-Item -Destination $dest -Recurse -Force
-```
-
-**macOS / Linux:**
-```bash
-# Navigate to your Unity project root
-cd /path/to/your/unity-project
-
-# Create plugins directory and copy (excludes .claude directory and temp files)
-mkdir -p .claude/plugins
-rsync -av --exclude='.claude' --exclude='tmpclaude-*' /path/to/unity-csharp-lsp-claude-code/ .claude/plugins/unity-csharp-lsp/
-```
-
-#### Method C: Direct plugin install command
-
-```bash
-# From within Claude Code
-/plugin install /full/path/to/unity-csharp-lsp-claude-code
-```
-
-> **Note:** This method may have issues persisting across sessions on some systems. If the plugin doesn't load after restart, use Method A or B instead.
-
-### Step 3: Restart Claude Code
+#### Step 3: Restart Claude Code
 
 Close and reopen Claude Code for the plugin to load.
 
