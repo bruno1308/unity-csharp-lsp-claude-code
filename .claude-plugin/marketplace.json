@@ -1,0 +1,13 @@
+{
+  "name": "unity-lsp-local",
+  "owner": {
+    "name": "Bruno Carvalho"
+  },
+  "plugins": [
+    {
+      "name": "unity-csharp-lsp",
+      "source": ".",
+      "description": "C# language server optimized for Unity game development with OmniSharp"
+    }
+  ]
+}

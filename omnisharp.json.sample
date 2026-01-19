@@ -1,0 +1,26 @@
+{
+  "msbuild": {
+    "enabled": true,
+    "loadProjectsOnDemand": false,
+    "useBundledOnly": true
+  },
+  "formattingOptions": {
+    "enableEditorConfigSupport": true,
+    "newLine": "\n",
+    "useTabs": false,
+    "tabSize": 4,
+    "indentationSize": 4
+  },
+  "roslynExtensionsOptions": {
+    "enableAnalyzersSupport": true,
+    "enableImportCompletion": true,
+    "documentAnalysisTimeoutMs": 30000
+  },
+  "script": {
+    "enabled": true,
+    "defaultTargetFramework": "net48"
+  },
+  "sdk": {
+    "includePrereleases": false
+  }
+}

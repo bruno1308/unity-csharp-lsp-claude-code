@@ -1,0 +1,21 @@
+{
+  "csharp": {
+    "command": "C:\\Users\\RTZ-PC\\omnisharp\\OmniSharp.exe",
+    "args": [
+      "-s", "B:\\UnityProjects\\MidnightDeception\\MidnightDeception.sln",
+      "-lsp"
+    ],
+    "env": {
+      "DOTNET_ROOT": "C:\\Program Files\\dotnet",
+      "MSBuildSDKsPath": "C:\\Program Files\\dotnet\\sdk\\6.0.428\\Sdks",
+      "DOTNET_MSBUILD_SDK_RESOLVER_SDKS_DIR": "C:\\Program Files\\dotnet\\sdk\\6.0.428\\Sdks",
+      "MSBuildEnableWorkloadResolver": "false"
+    },
+    "extensionToLanguage": {
+      ".cs": "csharp",
+      ".csx": "csharp"
+    },
+    "transport": "stdio",
+    "maxRestarts": 5
+  }
+}

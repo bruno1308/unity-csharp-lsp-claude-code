@@ -1,0 +1,21 @@
+{
+  "name": "unity-csharp-lsp",
+  "description": "C# language server optimized for Unity game development with OmniSharp",
+  "version": "1.0.0",
+  "author": {
+    "name": "Bruno Carvalho"
+  },
+  "license": "MIT",
+  "repository": "https://github.com/bruno1308/unity-csharp-lsp-claude-code",
+  "homepage": "https://github.com/bruno1308/unity-csharp-lsp-claude-code",
+  "keywords": [
+    "csharp",
+    "c#",
+    "unity",
+    "unity3d",
+    "game-development",
+    "omnisharp",
+    "lsp",
+    "language-server"
+  ]
+}
