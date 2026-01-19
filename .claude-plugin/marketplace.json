@@ -6,7 +6,7 @@
   "plugins": [
     {
       "name": "unity-csharp-lsp",
-      "source": ".",
+      "source": "./",
       "description": "C# language server optimized for Unity game development with OmniSharp"
     }
   ]
